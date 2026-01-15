@@ -1,0 +1,15 @@
+01. Black (Negro)
+HEX: #171717
+RGB: 23, 23, 23
+
+02. Orange (Naranja)
+HEX: #F25623
+RGB: 242, 86, 43
+
+03. Dark Gray (Gris Oscuro)
+HEX: #4D4D4D
+RGB: 77, 77, 77
+
+04. Light Gray (Gris Claro)
+HEX: #DEDEDE
+RGB: 222, 222, 222

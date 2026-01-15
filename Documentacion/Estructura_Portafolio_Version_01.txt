@@ -1,0 +1,51 @@
+├── Portafolio/
+│   ├── desktop.ini
+│   ├── Home.html
+│   ├── css/
+│   │   ├── desktop.ini
+│   │   ├── styles.css
+│   ├── Documentacion/
+│   │   ├── Estructura_Portafolio_Version_01.txt
+│   │   ├── HistorialLaboral.txt
+│   │   ├── Paleta_Colores.txt
+│   │   ├── Iconos/
+│   │   │   ├── CSS3.ico
+│   │   │   ├── js.ico
+│   │   │   ├── Logo_05.ico
+│   ├── js/
+│   │   ├── desktop.ini
+│   │   ├── doom.js
+│   ├── static/
+│   │   ├── JuanEmmanuel LazoReyes_CV.pdf
+│   │   ├── Logo_01_Derecha.png
+│   │   ├── Logo_01_Izquierda.png
+│   │   ├── Logo_05.png
+│   │   ├── PROYECTOS.pdf
+│   │   ├── wallpaper.jpg
+│   │   ├── Portadas/
+│   │   │   ├── AutomatizaciónE-Commerce.jpg
+│   │   │   ├── CunaRadiante_Flutter.jpg
+│   │   │   ├── CunaRadiante_Ionic.jpg
+│   │   │   ├── FramerLandingPage.jpg
+│   │   │   ├── UrbanStore.jpg
+│   │   ├── svg/
+│   │   │   ├── Angular.svg
+│   │   │   ├── Bootstrap.svg
+│   │   │   ├── CSS.svg
+│   │   │   ├── Dart.svg
+│   │   │   ├── Django.svg
+│   │   │   ├── Docker.svg
+│   │   │   ├── Flutter.svg
+│   │   │   ├── Git.svg
+│   │   │   ├── HTML5.svg
+│   │   │   ├── Ionic.svg
+│   │   │   ├── JavaScript.svg
+│   │   │   ├── n8n.svg
+│   │   │   ├── Oracle.svg
+│   │   │   ├── Postgresql.svg
+│   │   │   ├── Python.svg
+│   │   │   ├── React.svg
+│   │   │   ├── SQLite.svg
+│   │   │   ├── Trello.svg
+│   │   │   ├── TypeScript.svg
+│   │   │   ├── Wix.svg

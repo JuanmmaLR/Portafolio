@@ -1,0 +1,44 @@
+Desarrollador Freelancer| Santiago
+07-2025 a la actualidad
+-Diseño y desarrollo de soluciones web a medida, incluyendo Landing Pages para servicios B2B y plataformas E-commerce escalables.
+-Implementación de arquitecturas MVC robustas utilizando Django y bases de datos PostgreSQL, integrando pasarelas de pago y gestión de inventarios.
+-Creación de interfaces modernas y de alta fidelidad (UI/UX) enfocadas en la conversión de usuarios y adaptabilidad móvil. Logro: Entrega exitosa de proyectos digitales enterprise-ready, abarcando desde la maquetación visual hasta el despliegue funcional en producción.
+
+Desarrollador Movil | MSRRA, Santiago
+01-2025 a 06-2025
+-Desarrollo de aplicación móvil educativa con Ionic, Angular y TypeScript
+-Migración de componentes a Flutter mejorando rendimiento en 40%
+-Participación en ceremonias Scrum (daily, sprint planning, retrospectives)
+*Logro: Lanzamiento exitoso del Simulador Móvil de Cuna Radiante
+
+Analista E-commerce | Weide, Santiago
+01-2023 a 12-2024
+-Procesamiento de 200+ órdenes diarias mediante sistemas CRM
+-Automatización de procesos con Python y VBA reduciendo tiempos en 70%
+- Gestión de logística inversa y atención al cliente
+*Logro: Reducción del 90% en errores de etiquetado
+
+Analista Digitador | Tata, Santiago
+03-2022 a 12-2022
+-Gestión de facturación mensual de seguros Santander
+-Cuadraturas y cierres mensuales con Excel y Access
+-Optimización de procesos incrementando eficiencia en 25%
+Logro: Reducción del 60% en discrepancias de conciliación
+
+Explotador y Soporte de sistema | Intelidata, Santiago
+03-2016 a 02-2019
+-Administración de sistemas de facturación para Entel
+-Desarrollo de procesos automatizados y QA testing
+-Gestión de migración de ambientes operacionales
+Logro: Mejora del 30% en estabilidad del sistema
+
+
+
+
+
+
+
+
+
+
+
