@@ -41,7 +41,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 img { max-width: 100%; height: auto; display: block; }
 
 /* =========================================
-   2. HEADER (Transparente estilo 'Prueba.png')
+   2. HEADER (Actualizado con efecto Scroll)
    ========================================= */
 .navbar {
     position: fixed;
@@ -49,7 +49,7 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
     height: 90px;
     
-    background-color: transparent; 
+    background-color: transparent; /* Transparente por defecto */
     border-bottom: none;
     backdrop-filter: none;
     
@@ -58,6 +58,17 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: center;
     padding: 20px 5%;
     z-index: 1000;
+    
+    /* Nueva transición suave para el efecto de scroll */
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, height 0.4s ease;
+}
+
+/* CLASE NUEVA: SE ACTIVA AL HACER SCROLL */
+.navbar.scrolled {
+    background-color: rgba(23, 23, 23, 0.95); /* Fondo oscuro casi sólido */
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra para separar del contenido */
+    height: 80px; /* Opcional: Se hace un poco más compacto */
 }
 
 .logo { 
@@ -323,69 +334,121 @@ h2 {
 }
 
 /* =========================================
-   7. CARRUSEL TECNOLOGÍAS (SLIDER INFINITO)
+   7. CARRUSEL 3D TECNOLOGÍAS
    ========================================= */
-.slider {
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
+
+/* Escenario que da profundidad */
+.scene {
+    width: 320px;
+    height: 400px;
+    margin: 40px auto;
+    perspective: 1200px;
     position: relative;
+}
+
+/* Objeto giratorio */
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotation 15s infinite linear;
+}
+
+/* Pause al pasar el mouse para leer mejor */
+.carousel:hover {
+    animation-play-state: paused;
+}
+
+/* Animación de giro infinito */
+@keyframes rotation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Estilos de cada cara (tarjeta) */
+.tech-category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%; /* Altura fija para uniformidad */
+    background: rgba(23, 23, 23, 0.85); /* Un poco más opaco para que no se mezclen visualmente */
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-dark-gray);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+    
+    /* Configuración para que se vean bien en 3D */
+    backface-visibility: hidden; /* Oculta la parte de atrás para evitar ruido visual */
+    /* Nota: Si quieres ver a través de ellas (efecto vidrio total), cambia a 'visible' */
+    backface-visibility: visible; 
+}
+
+/* --- Posicionamiento geométrico de las 3 caras (Triángulo equilátero) --- */
+
+/* Cara 1: Frente */
+.carousel .tech-category:nth-child(1) {
+    transform: rotateY(0deg) translateZ(350px);
+}
+
+/* Cara 2: Girada 120 grados */
+.carousel .tech-category:nth-child(2) {
+    transform: rotateY(120deg) translateZ(350px);
+}
+
+/* Cara 3: Girada 240 grados */
+.carousel .tech-category:nth-child(3) {
+    transform: rotateY(240deg) translateZ(350px);
+}
+
+/* Estilos internos de las tarjetas (Títulos e Íconos) */
+.tech-category h3 {
+    color: var(--color-orange);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--color-dark-gray);
+    padding-bottom: 10px;
+    display: inline-block;
     width: 100%;
 }
 
-.slider::before,
-.slider::after {
-    background: linear-gradient(to right, rgba(23,23,23,1) 0%, rgba(23,23,23,0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
-
-.slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider-track {
+.tech-icons {
     display: flex;
-    width: calc(150px * 40); /* Ajustado según la cantidad de slides */
-    animation: scroll 40s linear infinite;
-}
-
-.slide {
-    height: 100px;
-    width: 150px;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 15px;
+    gap: 20px;
 }
 
-.slide img {
-    width: 80%; /* Ajusta el tamaño del icono */
-    height: auto;
-    filter: grayscale(100%); /* Efecto blanco y negro por defecto */
-    transition: filter 0.3s ease, transform 0.3s ease;
-    opacity: 0.7;
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    transition: transform 0.3s ease;
 }
 
-.slide img:hover {
-    filter: grayscale(0%); /* Color original al pasar el mouse */
-    transform: scale(1.2); /* Pequeño zoom */
-    opacity: 1;
+.tech-item:hover {
+    transform: scale(1.1);
 }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-150px * 20)); } /* Mueve la mitad para hacer el bucle */
+.tech-item img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-item:hover img {
+    filter: drop-shadow(0 0 5px rgba(242, 86, 35, 0.6));
+}
+
+.tech-item span {
+    font-size: 0.8rem;
+    color: var(--color-light-gray);
+    font-weight: 500;
 }
 
 /* --- Formulario y Botones --- */
@@ -499,6 +562,31 @@ footer h3 { color: var(--color-light-gray); margin: 10px 0; }
     .left-panel { order: 2; }
     .hero-logo-container img { width: 300px; max-width: 100%; }
     h2 { font-size: 2rem; }
+    
+    /* --- AJUSTE CRÍTICO PARA EL CARRUSEL 3D EN MÓVILES --- */
+    /* En móviles desactivamos el 3D porque no cabe y es ilegible */
+    .scene {
+        width: 100%;
+        height: auto;
+        perspective: none;
+        margin: 0;
+    }
+    .carousel {
+        position: relative;
+        animation: none;
+        transform-style: flat;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .tech-category {
+        position: relative;
+        width: 100%;
+        height: auto;
+        transform: none !important; /* Reseteamos las rotaciones */
+        backface-visibility: visible;
+        background: rgba(23, 23, 23, 0.7);
+    }
 }
 
 /* =========================================

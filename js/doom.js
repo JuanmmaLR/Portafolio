@@ -3,7 +3,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Portafolio cargado correctamente.");
 
-    // Manejo del formulario de contacto con EmailJS
+    // ===============================================
+    // MANEJO DEL HEADER AL HACER SCROLL
+    // ===============================================
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            // Si baja más de 50px, agregamos la clase "scrolled"
+            navbar.classList.add('scrolled');
+        } else {
+            // Si vuelve arriba, quitamos la clase para que sea transparente
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // ===============================================
+    // MANEJO DEL FORMULARIO DE CONTACTO CON EMAILJS
+    // ===============================================
     const contactForm = document.getElementById('contactForm');
     const btnSubmit = document.getElementById('btn-submit');
 
